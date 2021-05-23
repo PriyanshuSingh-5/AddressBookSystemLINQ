@@ -14,7 +14,8 @@ namespace AddressLinq
             //AddressDataTable.AddDataIntoTable();
             //AddressDataTable.EditExistingContactDetails("Mansingh", "Meena", 322514);
             //AddressDataTable.DeleteContactUsingName();
-            AddressDataTable.RetrievingContactDetailsByCityOrState();
+            //AddressDataTable.RetrievingContactDetailsByCityOrState();
+            AddressDataTable.GetCountOfContactInCityOrState();
             Console.ReadLine();
         }
     }
