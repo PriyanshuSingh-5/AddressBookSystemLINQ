@@ -82,6 +82,21 @@ namespace AddressLinq
                 Console.WriteLine("FirstName: " + "\t" + record.Field<string>("FirstName") + "\t" + "LastName: " + "\t" + record.Field<string>("LastName") + "\t" + "Address: " + record.Field<string>("Address") + "\t" + "City: " + record.Field<string>("City") + "\t" + " State: " + record.Field<string>("State") + "\t" + "Zip: " + record.Field<int>("Zip") + "\t" + " PhoneNumber: " + record.Field<double>("PhoneNumber") + "\t" + "EmailID: " + record.Field<string>("Email"));
             }
         }
+
+        // UC6 Retrieving Contact Details By State Or City Name.
+       
+        public static void RetrievingContactDetailsByCityOrState()
+        {
+            var retrieveData = from records in table.AsEnumerable()
+                               where (records.Field<string>("City").Equals("Imartapura") || records.Field<string>("State").Equals("Rajasthan"))
+                               select records;
+            //Printing data
+            Console.WriteLine("\nRetrieved contactact details by city or state name :");
+            foreach (var record in retrieveData)
+            {
+                Console.WriteLine("FirstName: " + "\t" + record.Field<string>("FirstName") + "\t" + "LastName: " + "\t" + record.Field<string>("LastName") + "\t" + "Address: " + record.Field<string>("Address") + "\t" + "City: " + record.Field<string>("City") + "\t" + " State: " + record.Field<string>("State") + "\t" + "Zip: " + record.Field<int>("Zip") + "\t" + " PhoneNumber: " + record.Field<double>("PhoneNumber") + "\t" + "EmailID: " + record.Field<string>("Email"));
+            }
+        }
     }
 }
 

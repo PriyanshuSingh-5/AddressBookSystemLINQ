@@ -13,7 +13,8 @@ namespace AddressLinq
             Console.WriteLine("Welcome to the Address Book Data LINQ Operartion Program");
             //AddressDataTable.AddDataIntoTable();
             //AddressDataTable.EditExistingContactDetails("Mansingh", "Meena", 322514);
-            AddressDataTable.DeleteContactUsingName();
+            //AddressDataTable.DeleteContactUsingName();
+            AddressDataTable.RetrievingContactDetailsByCityOrState();
             Console.ReadLine();
         }
     }
