@@ -11,8 +11,9 @@ namespace AddressLinq
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the Address Book Data LINQ Operartion Program");
-            AddressDataTable.AddDataIntoTable();
-            AddressDataTable.EditExistingContactDetails("Mansingh", "Meena", 322514);
+            //AddressDataTable.AddDataIntoTable();
+            //AddressDataTable.EditExistingContactDetails("Mansingh", "Meena", 322514);
+            AddressDataTable.DeleteContactUsingName();
             Console.ReadLine();
         }
     }
